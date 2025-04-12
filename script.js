@@ -54,65 +54,99 @@
 // Create variables for your name, favorite food, and a hobby.
 // Print a sentence using all 3.
 
-let fullName = "Michael Jordan";
-let favoriteFood = "pasta";
-let hobby = "Golf";
+// let fullName = "Michael Jordan";
+// let favoriteFood = "pasta";
+// let hobby = "Golf";
 
-// string concatenation
-let sentence =
-  "Hi, my name is " +
-  fullName +
-  " my favorite food is " +
-  favoriteFood +
-  " and my favorite hobby is " +
-  hobby +
-  ".";
+// // string concatenation
+// let sentence =
+//   "Hi, my name is " +
+//   fullName +
+//   " my favorite food is " +
+//   favoriteFood +
+//   " and my favorite hobby is " +
+//   hobby +
+//   ".";
 
-// console.log(sentence);
+// // console.log(sentence);
 
-// template literals
-// string templates
-// string interpolation: using ${  }
-let templateSentence = `Hi, my name is ${fullName} my favorite food is ${favoriteFood} and my favorite hobby is ${hobby}.`;
-// console.log(templateSentence);
+// // template literals
+// // string templates
+// // string interpolation: using ${  }
+// let templateSentence = `Hi, my name is ${fullName} my favorite food is ${favoriteFood} and my favorite hobby is ${hobby}.`;
+// // console.log(templateSentence);
 
-let isEqual = 2 + 2 === 4;
-// console.log(isEqual)
+// let isEqual = 2 + 2 === 4;
+// // console.log(isEqual)
 
-let isGreaterThan = 10 <= 10000;
-// console.log(isGreaterThan)
+// let isGreaterThan = 10 <= 10000;
+// // console.log(isGreaterThan)
 
-// && operator evaluates two statements,
-// if they are both truthy, then the statement
-// evaluates to true
-// console.log(   1 > 5 && 10 < 100     ) // false
-// console.log(   1 < 5 && 10 < 100     ) // true
+// // && operator evaluates two statements,
+// // if they are both truthy, then the statement
+// // evaluates to true
+// // console.log(   1 > 5 && 10 < 100     ) // false
+// // console.log(   1 < 5 && 10 < 100     ) // true
 
-// || operator also evaluates two statements,
-// if one of them are truthy, then the statement
-// evaluates to true
-// console.log(   1 < 5 || 10 < 100     ) // true
-// console.log(   1 > 5 || 10 < 100     ) // true
-// console.log(   1 > 5 || 10 > 100     ) // false
+// // || operator also evaluates two statements,
+// // if one of them are truthy, then the statement
+// // evaluates to true
+// // console.log(   1 < 5 || 10 < 100     ) // true
+// // console.log(   1 > 5 || 10 < 100     ) // true
+// // console.log(   1 > 5 || 10 > 100     ) // false
 
-// syntax for defining a function
-// parameters go inside () in function definition
-function greetUser(firstName, lastName) {
-  return `Hello, ${firstName} ${lastName}. Thanks for visiting`;
+// // syntax for defining a function
+// // parameters go inside () in function definition
+// function greetUser(firstName, lastName) {
+//   return `Hello, ${firstName} ${lastName}. Thanks for visiting`;
+// }
+
+// // calling/invoking our function
+// // arguments go inside () in function invocation
+// // greetUser("Thomas", "Basham")
+// console.log(  greetUser("Thomas", "Basham")  );
+
+// // write a function that takes two parameters
+// // to get the perimeter of a square
+// function getPerimeter(width, height) {
+//   let perimeter = width * 2 + height * 2;
+//   return perimeter
+// }
+
+// console.log( getPerimeter(2, 2) )
+// console.log( getPerimeter(10, 10) )
+// console.log( getPerimeter(10000, 1023423423) )
+
+// three keywords used to declare variables:
+// let, const, var
+// var is outdated
+
+// with let, you can change the value of the variable
+let animal = "hippo";
+// reassignment
+animal = "dog";
+animal = "mouse";
+animal = "kangaroo";
+
+console.log(animal);
+
+// const is a constant variable,
+// you can't change the value
+const sport = "soccer";
+// sport = 'football' // Uncaught TypeError: Assignment to constant variable.
+console.log(sport);
+
+let greetingElement = document.getElementById("greeting-p");
+greetingElement.textContent = "Hello from Codex Academy!";
+
+function doubleNumber() {
+  let doublerElement = document.getElementById("doubler-p");
+  let doublerTextContent = doublerElement.innerHTML;
+  doublerElement.innerHTML = doublerTextContent * 2
 }
 
-// calling/invoking our function
-// arguments go inside () in function invocation
-// greetUser("Thomas", "Basham")
-console.log(  greetUser("Thomas", "Basham")  );
-
-// write a function that takes two parameters
-// to get the perimeter of a square
-function getPerimeter(width, height) {
-  let perimeter = width * 2 + height * 2;
-  return perimeter
+function clearNumber () {
+  let doublerElement = document.getElementById("doubler-p");
+  doublerElement.innerHTML = "3"
 }
 
-console.log( getPerimeter(2, 2) )
-console.log( getPerimeter(10, 10) )
-console.log( getPerimeter(10000, 1023423423) )
